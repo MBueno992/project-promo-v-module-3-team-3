@@ -54,51 +54,51 @@ function App() {
         </section>
 
         <section className="form">
-          <h2 className="title">Información</h2>
+          <h2 className="form__title">Información</h2>
 
           <section className="ask-info">
-            <p className="subtitle">Cuéntanos sobre el proyecto</p>
-            <hr className="line" />
+            <p className="ask-info__subtitle">Cuéntanos sobre el proyecto</p>
+            <hr className="ask-info__line" />
           </section>
 
           <fieldset className="project">
             <input
-              className="input"
+              className="project__input"
               type="text"
               placeholder="Nombre del proyecto"
               name="name"
               id="name"
             />
             <input
-              className="input"
+              className="project__input"
               type="text"
               name="slogan"
               id="slogan"
               placeholder="Slogan"
             />
             <input
-              className="input"
+              className="project__input"
               type="text"
               name="repo"
               id="repo"
               placeholder="Repo"
             />
             <input
-              className="input"
+              className="project__input"
               type="text"
               placeholder="Demo"
               name="demo"
               id="demo"
             />
             <input
-              className="input"
+              className="project__input"
               type="text"
               placeholder="Tecnologías"
               name="technologies"
               id="technologies"
             />
             <textarea
-              className="textarea"
+              className="project__textarea"
               type="text"
               placeholder="Descripción"
               name="desc"
