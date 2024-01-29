@@ -6,24 +6,16 @@ import logoAdalab from '../images/logo-adalab.png';
 import { useState } from 'react';
 
 function App() {
-  
-  const [projectName, setProjectName] = useState("");
-  const [projectSlogan, setProjectSlogan] = useState("");
-  const [projectTechnologies, setProjectTechnologies] = useState("");
-  const [projectRepo, setProjectRepo] = useState("");
-  const [projectDemo, setProjectDemo] = useState("");
-  const [projectDesc, setProjectDesc] = useState("");
-  const [authorName, setAuthorName] = useState("");
-  const [authorJob, setAuthorJob] = useState("");
- /*  const [authorPhoto, setAuthorPhoto] = useState(""); */
-/*   const [image, setImage] = useState(""); */
-
-
-
-
-
-
-
+  const [projectName, setProjectName] = useState('');
+  const [projectSlogan, setProjectSlogan] = useState('');
+  const [projectTechnologies, setProjectTechnologies] = useState('');
+  const [projectRepo, setProjectRepo] = useState('');
+  const [projectDemo, setProjectDemo] = useState('');
+  const [projectDesc, setProjectDesc] = useState('');
+  const [authorName, setAuthorName] = useState('');
+  const [authorJob, setAuthorJob] = useState('');
+  /*  const [authorPhoto, setAuthorPhoto] = useState(""); */
+  /*   const [image, setImage] = useState(""); */
 
   return (
     <div className="container">
@@ -50,29 +42,33 @@ function App() {
       <main className="main">
         <section className="preview">
           <img className="preview__image" src={project} alt="" />
-        
-        <section className="author">
-          <section className="author__project">
-            <p className="author__project--subtitle">Personal Project Card</p>
-            <hr className="author__project--line" />
-            <h2 className="author__project--title">Elegant Workspace</h2>
-            <p className="author__project--slogan">Diseños Exclusivos</p>
-            <p className="author__project--description">Product Description</p>
-            <p className="author__project--desc">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero,
-              delectus? Voluptates at hic aliquam porro ad suscipit
-            </p>
-            <section className="author__technologies">
-              <p className="author__technologies--text">React JS - MongoDB </p>
+
+          <section className="author">
+            <section className="author__project">
+              <p className="author__project--subtitle">Personal Project Card</p>
+              <hr className="author__project--line" />
+              <h2 className="author__project--title">Elegant Workspace</h2>
+              <p className="author__project--slogan">Diseños Exclusivos</p>
+              <p className="author__project--description">
+                Product Description
+              </p>
+              <p className="author__project--desc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Libero, delectus? Voluptates at hic aliquam porro ad suscipit
+              </p>
+              <section className="author__technologies">
+                <p className="author__technologies--text">
+                  React JS - MongoDB{' '}
+                </p>
+              </section>
+            </section>
+
+            <section className="author__info">
+              <img className="author__info--image" src={user} alt="" />
+              <p className="author__info--job">Full Stack Developer</p>
+              <p className="author__info--name">Emmelie Björklund</p>
             </section>
           </section>
-
-          <section className="author__info">
-            <img className="author__info--image" src={user} alt="" />
-            <p className="author__info--job">Full Stack Developer</p>
-            <p className="author__info--name">Emmelie Björklund</p>
-          </section>
-        </section>
         </section>
 
         <section className="form">
@@ -130,21 +126,21 @@ function App() {
             ></textarea>
           </fieldset>
 
-          {/* <section className="ask-info">
-            <p className="subtitle">Cuéntanos sobre la autora</p>
-            <hr className="line" />
+          <section className="ask-info">
+            <p className="ask-info__subtitle">Cuéntanos sobre la autora</p>
+            <hr className="ask-info__line" />
           </section>
 
-          <fieldset className="autor">
+          <fieldset className="autorForm">
             <input
-              className="input"
+              className="autorForm__input"
               type="text"
               placeholder="Nombre"
               name="autor"
               id="autor"
             />
             <input
-              className="input"
+              className="autorForm__input"
               type="text"
               placeholder="Trabajo"
               name="job"
@@ -153,13 +149,13 @@ function App() {
           </fieldset>
 
           <section className="buttons-img">
-            <button className="btn">Subir foto de proyecto</button>
-            <button className="btn">Subir foto de autora</button>
+            <button className="buttons-img__btn">Subir foto de proyecto</button>
+            <button className="buttons-img__btn">Subir foto de autora</button>
           </section>
           <section className="buttons-img">
-            <button className="btn-large" onClick="{handleClickCreateCard}"> }
-            <button className="btn-large">Crear Tarjeta</button>
-          </section> */}
+            {/* <button className="btn-large" onClick="{handleClickCreateCard}"> */}
+            <button className="buttons-img__btn-large">Crear Tarjeta</button>
+          </section>
 
           <section className="card">
             <span className=""> La tarjeta ha sido creada: </span>
