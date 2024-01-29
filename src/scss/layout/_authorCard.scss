@@ -1,128 +1,166 @@
+$color-white: #FFFFFF;
+$color-white-50: rgba(255, 255, 255, 0.5);
+$color-dark: #302C42;
+$color-dark-lilac: #8176AF;
+$font-family-catamaran: "Catamaran", sans-serif;
+$font-family-poppins: "Poppins", sans-serif;
+$font-family-montserrat: "Montserrat", sans-serif;
+
+
 .author {
-    width: 302px;
-    height: 214px;
-    padding: 22.4px 8.6px 34.5px 9.8px;
-    margin-left: 40px;
-    margin-right: 40px;
-    background-color: white;
-    color: #3e3e3e;
-    transform: translateY(-100px);
-    border-radius: 20px;
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 40px;
-  
-    @media (min-width: 768px) {
-      width: 423px;
-      height: 282px;
-    }
-  
-    &__project {
-   
-  
-      &--subtitle {
-        font-size: 8px;
-        text-align: center;
-        margin-top: 12.4px;
-        line-height: 9.4px;
-  
-        @media all and (min-width: 768px) {
-          font-size: 10px;
-        }
-      }
-  
-      &--line {
-        width: 100%;
-        border: 0;
-        height: 2px;
-        background-image: linear-gradient(
-          to right,
-          rgba(255, 255, 255, 0),
-          rgba(1, 1, 1, 0.75),
-          rgba(255, 255, 255, 0)
-        );
-      }
-  
-      &--title {
-        font-size: 14px;
-        color: black;
-        margin-bottom: 5px;
-        margin-top: 12px;
-  
-        @media all and (min-width: 768px) {
-          font-size: 24px;
-          line-height: 35px;
-         
-        }
-      }
-  
-      &--slogan {
-        font-size: 10px;
-        margin-bottom: 14px;
-        color: #575757;
-  
-        @media all and (min-width: 768px) {
-          font-size: 16px;
-          transform: translateY(-48px);
-        }
-      }
-  
-      &--description {
-        font-size: 8px;
-        @media all and (min-width: 768px) {
-          font-size: 10px;
-          transform: translateY(-40px);
-        }
-      }
-  
-      &--desc {
-        font-size: 8px;
-        margin-bottom: 18.1px;
-        line-height: 14.1px;
-        text-align: justify;
-  
-        @media all and (min-width: 768px) {
-          font-size: 10px;
-          transform: translateY(-40px);
-          line-height: 17.6px;
-        }
-      }
-    }
-  
-    &__technologies {
-      color: #505050;
-      font-size: 10px;
-  
-      @media all and (min-width: 768px) {
-        background-color: rgba(0, 0, 0, 0.05);
-        width: 155px;
-        height: 22px;
-        border-radius: 12px;
-        text-align: center;
-      }
-    }
-  
-    &__info {
-      width: 40%;
-      text-align: center;
+  width: 302px;
+  height: 214px;
+  padding: 22px 9px 36px 10px;
+  margin: auto;
+  background-color: $color-white;
+  color: pink;
+  transform: translateY(-34px);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 40px;
 
-      &--image {
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-    }
-
-    &--job {
-        color: #909090;
-        font-size: 10px;
-      }
-
-     &--name {
-        font-size: 14px;
-        color: black;
-      }
-    }
-  
-
+  @media (min-width: 768px) {
+    width: 350px;
+    height: 242px;
   }
-  
+
+  &__project {
+ 
+
+    &--subtitle {
+      font-size: 0.8rem;
+      text-align: center;
+      margin-top: 12.4px;
+      line-height: 9.4px;
+
+      @media all and (min-width: 768px) {
+        font-size: 1rem;
+      }
+    }
+
+    &--line {
+      width: 100%;
+      border: 0;
+      height: 2px;
+      background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgba(1, 1, 1, 0.75),
+        rgba(255, 255, 255, 0)
+      );
+    }
+
+    &--title {
+      font-size: 1.4rem;
+      color: black;
+      margin-bottom: 5px;
+      margin-top: 12px;
+
+      @media all and (min-width: 768px) {
+        font-size: 2.4rem;
+        line-height: 3.5rem;
+       
+      }
+    }
+
+    &--slogan {
+      font-size: 1rem;
+      margin-bottom: 14px;
+      color: #575757;
+
+      @media all and (min-width: 768px) {
+        font-size: 1.6rem;
+        transform: translateY(-48px);
+      }
+    }
+
+    &--description {
+      font-size: 0.8rem;
+      @media all and (min-width: 768px) {
+        font-size: 1rem;
+        transform: translateY(-40px);
+      }
+    }
+
+    &--desc {
+      font-size: 0.8rem;
+      margin-bottom: 18.1px;
+      line-height: 1.4rem;
+      text-align: justify;
+
+      @media all and (min-width: 768px) {
+        font-size: 1rem;
+        transform: translateY(-40px);
+        line-height: 1.76rem;
+      }
+    }
+  }
+
+  &__technologies {
+    color: #505050;
+    font-size: 1rem;
+
+    @media all and (min-width: 768px) {
+      background-color: rgba(0, 0, 0, 0.05);
+      width: 155px;
+      height: 22px;
+      border-radius: 12px;
+      text-align: center;
+      transform: translateY(-45px);
+      padding-top: 6px;
+    }
+  }
+
+  &__info {
+    width: 40%;
+    text-align: center;
+
+    &--image {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+  }
+
+  &--job {
+      color: #909090;
+      font-size: 1rem;
+    }
+
+   &--name {
+      font-size: 1.4rem;
+      color: black;
+    }
+  }
+
+
+}
+
+.main {
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+  }
+}
+.preview {
+  margin: 31px auto 0;
+  @media (min-width: 768px) {
+    width: 50%;
+    /* margin: 21px; */
+    margin-left: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__image {
+    object-fit: cover;
+    width: 100%;
+    @media (min-width: 768px) {
+      width: 487px;
+      height: 545px;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
