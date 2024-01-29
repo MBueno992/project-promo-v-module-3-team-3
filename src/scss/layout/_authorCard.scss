@@ -1,10 +1,24 @@
+$color-white: #FFFFFF;
+$greyish-brown: #505050;
+$color-black: black;
+$greyish-brown-Two: #575757;
+$warm-grey: #909090;
+
+
+$font-family-catamaran: "Catamaran", sans-serif;
+$font-family-poppins: "Poppins", sans-serif;
+$font-family-montserrat: "Montserrat", sans-serif;
+
+
+
+
 .author {
     width: 302px;
     height: 214px;
     padding: 22.4px 8.6px 34.5px 9.8px;
     margin: auto;
-    background-color: white;
-    color: #3e3e3e;
+    background-color: $color-white;
+    color: $greyish-brown;
     transform: translateY(-34px);
     border-radius: 20px;
     display: flex;
@@ -12,21 +26,23 @@
     gap: 40px;
   
     @media (min-width: 768px) {
-      width: 350px;
-      height: 242px;
+      width: 360px;
+      height: 252px;
     }
   
     &__project {
    
   
       &--subtitle {
-        font-size: 8px;
+        font-size: 0.8rem;
         text-align: center;
+        font-family: $font-family-poppins;
+        
         margin-top: 12.4px;
         line-height: 9.4px;
   
         @media all and (min-width: 768px) {
-          font-size: 10px;
+          font-size: 1rem;
         }
       }
   
@@ -40,48 +56,53 @@
           rgba(1, 1, 1, 0.75),
           rgba(255, 255, 255, 0)
         );
+        transform: translateY(-5px);
       }
   
       &--title {
-        font-size: 14px;
-        color: black;
+        font-size: 1.4rem;
+        color: $color-black;
+        font-family: $font-family-poppins;
         margin-bottom: 5px;
         margin-top: 12px;
   
         @media all and (min-width: 768px) {
-          font-size: 24px;
+          font-size: 2.4rem;
           line-height: 35px;
          
         }
       }
   
       &--slogan {
-        font-size: 10px;
+        font-size: 1rem;
         margin-bottom: 14px;
-        color: #575757;
+        color: $greyish-brown-Two;
+        font-family: $font-family-poppins;
   
         @media all and (min-width: 768px) {
-          font-size: 16px;
-          transform: translateY(-48px);
+          font-size: 1.6rem;
+          transform: translateY(-50px);
         }
       }
   
       &--description {
-        font-size: 8px;
+        font-size: 0.8rem;
+        font-family: $font-family-poppins;
         @media all and (min-width: 768px) {
-          font-size: 10px;
+          font-size: 1rem;
           transform: translateY(-40px);
         }
       }
   
       &--desc {
-        font-size: 8px;
+        font-size: 0.8rem;
         margin-bottom: 18.1px;
         line-height: 14.1px;
         text-align: justify;
+        margin-right: 22px;
   
         @media all and (min-width: 768px) {
-          font-size: 10px;
+          font-size: 1rem;
           transform: translateY(-40px);
           line-height: 17.6px;
         }
@@ -89,8 +110,8 @@
     }
   
     &__technologies {
-      color: #505050;
-      font-size: 10px;
+      color: $greyish-brown;
+      font-size: 1rem;
   
       @media all and (min-width: 768px) {
         background-color: rgba(0, 0, 0, 0.05);
@@ -106,6 +127,8 @@
     &__info {
       width: 40%;
       text-align: center;
+      margin-left: 7px;
+      margin-top: 20px;
 
       &--image {
         width: 70px;
@@ -114,13 +137,13 @@
     }
 
     &--job {
-        color: #909090;
-        font-size: 10px;
+        color: $warm-grey;
+        font-size: 1rem;
       }
 
      &--name {
-        font-size: 14px;
-        color: black;
+        font-size: 1.4rem;
+        color: $color-black;
       }
     }
   

@@ -60,7 +60,7 @@ function App() {
             <p className="author__project--description">Product Description</p>
             <p className="author__project--desc">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero,
-              delectus? Voluptates at hic aliquam porro ad suscipit
+              delectus?
             </p>
             <section className="author__technologies">
               <p className="author__technologies--text">React JS - MongoDB </p>
