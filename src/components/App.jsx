@@ -7,21 +7,25 @@ import logoAdalab from '../images/logo-adalab.png'
 
 function App() {
   return (
- 
+
     <div className="container">
+
       <header className="header">
+
         <nav className='header__nav'>
           <div className='header__nav--div'>
-            {/* icono proyecto */}
+            <i className="fa-solid fa-laptop-code"></i>
             <p className="text">Proyectos Molones</p>
           </div>
           <a href="https://www.adalab.es/" className='header__nav--logo'><img src={logoAdalab} alt="adalab" /></a>
         </nav>
+
         <div className='header__title'>
           <h1>Proyectos molones</h1>
           <h2>Escaparate en línea para recoger ideas a través de la tecnología</h2>
-          <button className='header__title--btn'>Ver proyectos</button>
+          <button className='header__title--btn'>Nuevo proyecto</button>
         </div>
+
       </header>
 
       <main className="main">
@@ -146,6 +150,10 @@ function App() {
           </section>
         </section>
       </main>
+
+      <footer className="footer">
+        <a href="https://www.adalab.es/" className='header__nav--logo'><img src={logoAdalab} alt="adalab" /></a>
+      </footer>
     </div>
 
   );

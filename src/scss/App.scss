@@ -1,8 +1,15 @@
 @import 'core/reset';
 @import 'layout/authorCard';
 
+@import './layout/header';
+@import './layout/footer';
+
+
+$color-white: #ffffff;
+$color-dark: #302c42;
+
 .container {
-  background-color: #302c42;
+  background-color: $color-dark;
   height: 100vh;
   padding: 20px;
   
@@ -14,11 +21,9 @@
   justify-content: space-between;
 }
 
-.header .text {
-  color: white;
-}
 
-.main {
+
+.header .main {
   display: flex;
   flex-direction: column;
   padding-top: 50px;
@@ -78,6 +83,7 @@
   padding-left: 15px;
   padding-top: 5px;
 }
+
 .main .input::placeholder,
 .textarea::placeholder {
   color: #ffffff;
@@ -222,13 +228,11 @@
   border: 0;
   height: 2px;
 
-  background-image: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0),
-    rgba(1, 1, 1, 0.75),
-    rgba(255, 255, 255, 0)
-  );
-} 
+  background-image: linear-gradient(to right,
+      rgba(255, 255, 255, 0),
+      rgba(1, 1, 1, 0.75),
+      rgba(255, 255, 255, 0));
+}
 
 .btn-color {
   border-radius: 20px;
