@@ -2,25 +2,27 @@
 import '../scss/App.scss';
 import project from '../images/cover.jpeg';
 import user from '../images/user.jpeg';
-import logoAdalab from '../images/logo-adalab.png'
-
+import logoAdalab from '../images/logo-adalab.png';
 
 function App() {
   return (
- 
     <div className="container">
       <header className="header">
-        <nav className='header__nav'>
-          <div className='header__nav--div'>
+        <nav className="header__nav">
+          <div className="header__nav--div">
             {/* icono proyecto */}
             <p className="text">Proyectos Molones</p>
           </div>
-          <a href="https://www.adalab.es/" className='header__nav--logo'><img src={logoAdalab} alt="adalab" /></a>
+          <a href="https://www.adalab.es/" className="header__nav--logo">
+            <img src={logoAdalab} alt="adalab" />
+          </a>
         </nav>
-        <div className='header__title'>
+        <div className="header__title">
           <h1>Proyectos molones</h1>
-          <h2>Escaparate en línea para recoger ideas a través de la tecnología</h2>
-          <button className='header__title--btn'>Ver proyectos</button>
+          <h2>
+            Escaparate en línea para recoger ideas a través de la tecnología
+          </h2>
+          <button className="header__title--btn">Ver proyectos</button>
         </div>
       </header>
       <main className="main">
@@ -33,7 +35,7 @@ function App() {
               <hr className="line" />
               <h2 className="title">Elegant Workspace</h2>
               <p className="slogan">Diseños Exclusivos</p>
-              <p className='description'>Product Description</p>
+              <p className="description">Product Description</p>
               <p className="desc">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Libero, delectus? Voluptates at hic aliquam porro ad suscipit
@@ -76,20 +78,22 @@ function App() {
               id="slogan"
               placeholder="Slogan"
             />
-            <input
-              className="project__input"
-              type="text"
-              name="repo"
-              id="repo"
-              placeholder="Repo"
-            />
-            <input
-              className="project__input"
-              type="text"
-              placeholder="Demo"
-              name="demo"
-              id="demo"
-            />
+            <div className="demo">
+              <input
+                className="project__input"
+                type="text"
+                name="repo"
+                id="repo"
+                placeholder="Repo"
+              />
+              <input
+                className="project__input"
+                type="text"
+                placeholder="Demo"
+                name="demo"
+                id="demo"
+              />
+            </div>
             <input
               className="project__input"
               type="text"
@@ -134,19 +138,18 @@ function App() {
           </section>
           <section className="buttons-img">
             {/* <button className="btn-large" onClick="{handleClickCreateCard}"> */}
-            <button className="btn-large">
-              Crear Tarjeta
-            </button>
+            <button className="btn-large">Crear Tarjeta</button>
           </section>
 
           <section className="card">
             <span className=""> La tarjeta ha sido creada: </span>
-            <a href="" className="" target="_blank" rel="noreferrer"> </a>
+            <a href="" className="" target="_blank" rel="noreferrer">
+              {' '}
+            </a>
           </section>
         </section>
       </main>
     </div>
-
   );
 }
 

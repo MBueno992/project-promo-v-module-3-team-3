@@ -1,24 +1,25 @@
 .form {
   background-image: radial-gradient(circle at 50% 50%, (#403a5f), #211e2e 92%);
-  width: 40%;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   border: solid 1px rgba(0, 0, 0, 0);
+  margin: 0 auto;
+  @media (min-width: 768px) {
+    width: 40%;
+    margin: 21px 17px 0 48px;
+  }
   &__title {
+    margin-top: 17px;
     color: #ffffff;
     text-align: center;
   }
 }
 
 .ask-info {
-  padding: 20px;
   text-align: center;
   color: white;
-
-  &__subtitle {
-    padding-bottom: 10px;
-  }
   &__line {
-    width: 100%;
+    margin: 10px auto;
+    width: 97px;
     border: 0;
     height: 1px;
     background-image: linear-gradient(
@@ -27,6 +28,9 @@
       rgba(255, 255, 255, 0.75),
       rgba(255, 255, 255, 0)
     );
+  }
+  &__subtitle {
+    margin-top: 34px;
   }
 }
 
@@ -40,12 +44,13 @@
     background-color: transparent;
     border: 2px solid white;
     border-radius: 40px;
-    height: 42.72px;
-    margin: 0 38px;
+    height: 32.3px;
+    margin: 0 24px;
     color: #ffffff;
     padding-left: 15px;
     padding-top: 5px;
     &::placeholder {
+      font-size: 10px;
       color: #ffffff;
     }
   }
@@ -54,4 +59,8 @@
     resize: none;
     width: inherit;
   }
+}
+.demo {
+  display: flex;
+  flex-direction: row-reverse;
 }
