@@ -1,43 +1,42 @@
 @import 'core/reset';
+@import 'core/variables';
 @import 'layout/authorCard';
+@import './layout/header';
+@import './layout/infoProject';
+@import './layout/footer';
+
+
 
 .container {
-  background-color: #302c42;
-  height: 100vh;
+  background-color: $color-dark;
+  // height: 100vh;
   padding: 20px;
-  
 }
 
-.header {
-
- 
+/*.header {
   justify-content: space-between;
 }
 
-.header .text {
-  color: white;
-}
-
-.main {
+.header .main {
   display: flex;
   flex-direction: column;
   padding-top: 50px;
   height: 80vh;
-} 
+}
 .main .title {
   color: #ffffff;
   text-align: center;
-} 
+}
 
 .main .ask-info {
   padding: 20px;
   text-align: center;
   color: white;
-} 
+}
 
 .main .ask-info .subtitle {
   padding-bottom: 10px;
-} 
+}
 
 .main .ask-info .line {
   width: 100%;
@@ -49,7 +48,7 @@
     rgba(255, 255, 255, 0.75),
     rgba(255, 255, 255, 0)
   );
-} 
+}
 
 .main .preview {
   width: 60%;
@@ -57,8 +56,8 @@
 
 .main .form {
   background-color: #302c42;
-  width: 40%;
-} 
+  
+}
 
 .main .project,
 .main .autor {
@@ -66,7 +65,7 @@
   flex-direction: column;
   gap: 10px;
   border: none;
-} 
+}
 
 .main .input,
 .textarea {
@@ -78,6 +77,7 @@
   padding-left: 15px;
   padding-top: 5px;
 }
+
 .main .input::placeholder,
 .textarea::placeholder {
   color: #ffffff;
@@ -111,20 +111,20 @@
 
 .main .preview {
   padding: 20px;
-} 
-
-.main .preview .image {
-  object-fit: cover;
-  width: 100%;
-  height: 80%;
 }
 
-.main .preview  {
+.main .preview .image {
+ /*  object-fit: cover;
+  width: 100%; */
+ /*  height: 80%; */
+
+
+/* .main .preview {
   background-color: white;
   color: #3e3e3e;
   width: 90%;
-  height: 50%;
-  transform: translateY(-100px);
+ /*  height: 50%; */
+  /* transform: translateY(-100px);
   margin: auto;
   border-radius: 20px;
   display: flex;
@@ -132,45 +132,43 @@
   gap: 40px;
   padding: 30px;
   overflow-y: scroll;
-} 
+}
 
 .info-autor {
   width: 40%;
   text-align: center;
-} 
+}
 
 .info-autor .image {
   border-radius: 50%;
   width: 72px;
   height: 75px;
-} 
+}
 
 .info-autor .job {
-  
   color: #909090;
   font-size: 10px;
-} 
+}
 
 .info-autor .name {
   font-size: 14px;
   color: black;
-} 
+}
 
 .info-project {
   width: 60%;
-} 
+}
 
 .info-project .subtitle {
   font-size: 8px;
   text-align: center;
   margin-top: 12.4px;
   line-height: 9.4px;
-   
+
   @media all and (min-width: 768px) {
     font-size: 10px;
   }
-  
-} 
+}
 .info-project .title {
   font-size: 14px;
   color: black;
@@ -180,10 +178,8 @@
   @media all and (min-width: 768px) {
     font-size: 24px;
     line-height: 35px;
-    
   }
-  
-} 
+}
 
 .info-project .desc {
   font-size: 8px;
@@ -196,7 +192,7 @@
     transform: translateY(-40px);
     line-height: 17.6px;
   }
-} 
+}
 
 .description {
   font-size: 8px;
@@ -204,18 +200,18 @@
     font-size: 10px;
     transform: translateY(-40px);
   }
-} 
+}
 
 .info-project .slogan {
   font-size: 10px;
   margin-bottom: 14px;
   color: #575757;
 
-   @media all and (min-width: 768px) {
+  @media all and (min-width: 768px) {
     font-size: 16px;
     transform: translateY(-48px);
   }
-} 
+}
 
 .info-project .line {
   width: 100%;
@@ -228,7 +224,7 @@
     rgba(1, 1, 1, 0.75),
     rgba(255, 255, 255, 0)
   );
-} 
+}
 
 .btn-color {
   border-radius: 20px;
@@ -252,15 +248,14 @@
     height: 22px;
     border-radius: 12px;
     text-align: center;
-    
   }
-} 
+}
 
 .card {
   color: rgb(121, 120, 120);
   text-align: center;
   padding: 20px;
-} 
+}
 
 .hidden {
   display: none;
@@ -280,12 +275,9 @@
   flex-direction: row-reverse;
   gap: 40px;
 
-     @media all and (min-width: 768px){
-      width: 423px;
-      height: 282px;
-     }
-    }
-     
-
+  @media all and (min-width: 768px) {
+    width: 423px;
+    height: 282px;
+  }
+} */
  
-  
