@@ -23,35 +23,36 @@ function App() {
           <button className='header__title--btn'>Ver proyectos</button>
         </div>
       </header>
+
       <main className="main">
         <section className="preview">
           <img className="image" src={project} alt="" />
+          </section>
 
-          <section className="autor">
-            <section className="info-project">
-              <p className="subtitle">Personal Project Card</p>
-              <hr className="line" />
-              <h2 className="title">Elegant Workspace</h2>
-              <p className="slogan">Diseños Exclusivos</p>
-              <p className='description'>Product Description</p>
-              <p className="desc">
+          <section className="author">
+            <section className="author__project">
+              <p className="author__project--subtitle">Personal Project Card</p>
+              <hr className="author__project--line" />
+              <h2 className="author__project--title">Elegant Workspace</h2>
+              <p className="author__project--slogan">Diseños Exclusivos</p>
+              <p className='author__project--description'>Product Description</p>
+              <p className="author__project--desc">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Libero, delectus? Voluptates at hic aliquam porro ad suscipit
-                harum laboriosam saepe earum doloribus aperiam, ullam culpa
-                accusantium placeat odit corrupti ipsum!
+               
               </p>
-              <section className="technologies">
-                <p className="text">React JS, MongoDB</p>
+              <section className="author__technologies">
+                <p className="author__technologies--text">React JS - MongoDB </p>
               </section>
             </section>
 
-            <section className="info-autor">
-              <img className="image" src={user} alt="" />
-              <p className="job">Full Stack Developer</p>
-              <p className="name">Emmelie Björklund</p>
+            <section className="author__info">
+              <img className="author__info--image" src={user} alt="" />
+              <p className="author__info--job">Full Stack Developer</p>
+              <p className="author__info--name">Emmelie Björklund</p>
             </section>
           </section>
-        </section>
+       
 
         <section className="form">
           <h2 className="title">Información</h2>
