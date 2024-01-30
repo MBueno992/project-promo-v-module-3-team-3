@@ -17,6 +17,32 @@ function App() {
   /*  const [authorPhoto, setAuthorPhoto] = useState(""); */
   /*   const [image, setImage] = useState(""); */
 
+  const dataProject = (event) => {
+    const inputId = event.target.id;
+    const inputText = event.target.value;
+    if (inputId === 'name') {
+      setProjectName(inputText);
+    } else if (inputId === 'slogan') {
+      setProjectSlogan(inputText);
+    } else if (inputId === 'technologies') {
+      setProjectTechnologies(inputText);
+    } else if (inputId === 'demo') {
+      setProjectDemo(inputText);
+    } else if (inputId === 'desc') {
+      setProjectDesc(inputText);
+    }
+  };
+
+  const dataAuthor = () => {
+    const inputId = event.target.id;
+    const inputText = event.target.value;
+    if (inputId === 'autor') {
+      setAuthorName(inputText);
+    } else if (inputId === 'job') {
+      setAuthorJob(inputText);
+    }
+  };
+
   return (
     <div className="container">
       <header className="header">
@@ -47,26 +73,34 @@ function App() {
             <section className="author__project">
               <p className="author__project--subtitle">Personal Project Card</p>
               <hr className="author__project--line" />
-              <h2 className="author__project--title">Elegant Workspace</h2>
-              <p className="author__project--slogan">Diseños Exclusivos</p>
+              <h2 className="author__project--title">
+                {projectName || 'Elegant Workspace'}
+              </h2>
+              <p className="author__project--slogan">
+                {projectSlogan || 'Diseños Exclusivos'}
+              </p>
               <p className="author__project--description">
                 Product Description
               </p>
               <p className="author__project--desc">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Libero, delectus? Voluptates at hic aliquam porro ad suscipit
+                {projectDesc ||
+                  'Lorem, ipsum dolor sit amet consectetur adipisicing elit.                Libero, delectus? Voluptates at hic aliquam porro ad suscipit'}
               </p>
               <section className="author__technologies">
                 <p className="author__technologies--text">
-                  React JS - MongoDB{' '}
+                  {projectTechnologies || `React JS - MongoDB{' '}`}
                 </p>
               </section>
             </section>
 
             <section className="author__info">
               <img className="author__info--image" src={user} alt="" />
-              <p className="author__info--job">Full Stack Developer</p>
-              <p className="author__info--name">Emmelie Björklund</p>
+              <p className="author__info--job">
+                {authorJob || 'Full Stack Developer'}
+              </p>
+              <p className="author__info--name">
+                {authorName || 'Emmelie Björklund'}
+              </p>
             </section>
           </section>
         </section>
@@ -79,7 +113,7 @@ function App() {
             <hr className="ask-info__line" />
           </section>
 
-          <fieldset className="project">
+          <fieldset className="project" onChange={dataProject}>
             <input
               className="project__input"
               type="text"
@@ -131,7 +165,7 @@ function App() {
             <hr className="ask-info__line" />
           </section>
 
-          <fieldset className="autorForm">
+          <fieldset className="autorForm" onChange={dataAuthor}>
             <input
               className="autorForm__input"
               type="text"
