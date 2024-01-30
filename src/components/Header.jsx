@@ -19,8 +19,10 @@ function Header() {
         <h2>
           Escaparate en línea para recoger ideas a través de la tecnología
         </h2>
-        <button className="header__title--new-btn">Nuevo proyecto</button>
-        <button className="header__title--see-btn">Ver proyectos</button>
+        {/* <a className="header__title--new-btn" href=''>Nuevo proyecto</a> */}
+        <a className="header__title--see-btn" href="">
+          Ver proyectos
+        </a>
       </div>
     </header>
   );

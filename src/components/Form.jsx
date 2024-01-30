@@ -10,7 +10,7 @@ function Form() {
         <hr className="ask-info__line" />
       </section>
 
-      <fieldset className="project" onChange={dataProject}>
+      <fieldset className="project">
         <input
           className="project__input"
           type="text"
@@ -62,7 +62,7 @@ function Form() {
         <hr className="ask-info__line" />
       </section>
 
-      <fieldset className="autorForm" onChange={dataAuthor}>
+      <fieldset className="autorForm">
         <input
           className="autorForm__input"
           type="text"

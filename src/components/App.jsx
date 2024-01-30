@@ -6,16 +6,26 @@ import Main from './Main';
 import Footer from './Footer';
 
 function App() {
-  // const [projectName, setProjectName] = useState('');
-  // const [projectSlogan, setProjectSlogan] = useState('');
-  // const [projectTechnologies, setProjectTechnologies] = useState('');
-  // const [projectRepo, setProjectRepo] = useState('');
-  // const [projectDemo, setProjectDemo] = useState('');
-  // const [projectDesc, setProjectDesc] = useState('');
-  // const [authorName, setAuthorName] = useState('');
-  // const [authorJob, setAuthorJob] = useState('');
-  // /*  const [authorPhoto, setAuthorPhoto] = useState(""); */
-  // /*   const [image, setImage] = useState(""); */
+  const [projectName, setProjectName] = useState('');
+  const [projectSlogan, setProjectSlogan] = useState('');
+  const [projectTechnologies, setProjectTechnologies] = useState('');
+  const [projectRepo, setProjectRepo] = useState('');
+  const [projectDemo, setProjectDemo] = useState('');
+  const [projectDesc, setProjectDesc] = useState('');
+  const [authorName, setAuthorName] = useState('');
+  const [authorJob, setAuthorJob] = useState('');
+  /*  const [authorPhoto, setAuthorPhoto] = useState(""); */
+  /*   const [image, setImage] = useState(""); */
+  const mainData = {
+    name: projectName,
+    slogan: projectSlogan,
+    technologies: projectTechnologies,
+    repo: projectRepo,
+    demo: projectDemo,
+    desc: projectDesc,
+    authorName: authorName,
+    authorJob: authorJob,
+  };
   // const dataProject = (event) => {
   //   const inputId = event.target.id;
   //   const inputText = event.target.value;
