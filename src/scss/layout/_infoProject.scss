@@ -1,23 +1,33 @@
 .form {
-  background-image: radial-gradient(circle at 50% 50%, (#403a5f), #211e2e 92%);
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    ($color-dusk),
+    $color-dusk-two 92%
+  );
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   border: solid 1px rgba(0, 0, 0, 0);
   margin: 20px 30px;
-  width: 298.1px;
+  // width: 298.1px;
   @media (min-width: 768px) {
     width: 40%;
     margin: 30px 0 0 16px;
   }
   &__title {
     margin-top: 17px;
-    color: #ffffff;
+    color: $color-white;
     text-align: center;
+    font-size: 3rem;
+    font-family: $font-family-montserrat;
+    font-weight: bold;
+    @media (min-width: 768px) {
+      font-size: 4rem;
+    }
   }
 }
 
 .ask-info {
   text-align: center;
-  color: white;
+  color: $color-white;
   &__line {
     margin: 10px auto;
     width: 97px;
@@ -25,13 +35,19 @@
     height: 1px;
     background-image: linear-gradient(
       to right,
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0.75),
-      rgba(255, 255, 255, 0)
+      #343045,
+      $color-dark-lilac,
+      #343045
     );
   }
   &__subtitle {
-    margin-top: 34px;
+    margin-top: 18px;
+    font-size: 1.5rem;
+    font-family: $font-family-montserrat;
+    font-weight: lighter;
+    @media (min-width: 768px) {
+      font-size: 1.8rem;
+    }
   }
 }
 
@@ -43,25 +59,109 @@
   &__input,
   &__textarea {
     background-color: transparent;
-    border: 2px solid white;
+    border: 2px solid $color-white;
     border-radius: 40px;
-    height: 32.3px;
+    height: 32px;
     margin: 0 24px;
-    color: #ffffff;
+    color: $color-white;
     padding-left: 15px;
     padding-top: 5px;
+    font-size: 1rem;
     &::placeholder {
-      font-size: 1rem;
-      color: #ffffff;
+      font-family: $font-family-montserrat;
+      color: $color-white;
+    }
+    @media (min-width: 768px) {
+      font-size: 1.4rem;
+      height: 41px;
     }
   }
   &__textarea {
     height: 110px;
     resize: none;
     width: inherit;
+    &::placeholder {
+      padding: 5px;
+    }
   }
 }
 .demo {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 24px;
+}
+.demo input {
+  margin: 0;
+  width: 100%;
+}
+.autorForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: none;
+  &__input {
+    background-color: transparent;
+    border: 2px solid $color-white;
+    border-radius: 40px;
+    height: 32px;
+    margin: 0 24px;
+    color: $color-white;
+    padding-left: 15px;
+    padding-top: 5px;
+    font-size: 1rem;
+    &::placeholder {
+      font-family: $font-family-montserrat;
+      color: $color-white;
+    }
+    @media (min-width: 768px) {
+      font-size: 1.4rem;
+      height: 41px;
+    }
+  }
+}
+.buttons-img {
+  text-align: center;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  &__btn,
+  &__btn-large {
+    width: 112px;
+    margin-top: 10px;
+    color: $color-white;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    height: 34px;
+    background: linear-gradient(
+      90deg,
+      $color-dark-lilac -1.57%,
+      $color-dark-lilac-two 98.43%
+    );
+    border-radius: 40px;
+    font-family: $font-family-montserrat;
+    font-weight: bold;
+    font-size: 1rem;
+    @media (min-width: 768px) {
+      font-size: 1.2rem;
+      margin: 16px;
+      width: 160px;
+      height: 41px;
+    }
+  }
+  &__btn-large {
+    width: 139px;
+    border: solid 2px $color-white;
+    margin-bottom: 56px;
+    margin-top: 18px;
+    @media (min-width: 768px) {
+      width: 190px;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.card {
+  display: none;
 }

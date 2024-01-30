@@ -23,7 +23,31 @@ function App() {
 
 
 
+  const dataProject = (event) => {
+    const inputId = event.target.id;
+    const inputText = event.target.value;
+    if (inputId === 'name') {
+      setProjectName(inputText);
+    } else if (inputId === 'slogan') {
+      setProjectSlogan(inputText);
+    } else if (inputId === 'technologies') {
+      setProjectTechnologies(inputText);
+    } else if (inputId === 'demo') {
+      setProjectDemo(inputText);
+    } else if (inputId === 'desc') {
+      setProjectDesc(inputText);
+    }
+  };
 
+  const dataAuthor = () => {
+    const inputId = event.target.id;
+    const inputText = event.target.value;
+    if (inputId === 'autor') {
+      setAuthorName(inputText);
+    } else if (inputId === 'job') {
+      setAuthorJob(inputText);
+    }
+  };
 
   return (
     <div className="container">
@@ -51,26 +75,39 @@ function App() {
       <main className="main">
         <section className="preview">
           <img className="preview__image" src={project} alt="" />
-        
-        <section className="author">
-          <section className="author__project">
-            <p className="author__project--subtitle">Personal Project Card</p>
-            <hr className="author__project--line" />
-            <h2 className="author__project--title">Elegant Workspace</h2>
-            <p className="author__project--slogan">Diseños Exclusivos</p>
-            <p className="author__project--description">Product Description</p>
-            <p className="author__project--desc">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero,
-              delectus?
-            </p>
-            <section className="author__technologies">
-              <p className="author__technologies--text">React JS - MongoDB </p>
+
+          <section className="author">
+            <section className="author__project">
+              <p className="author__project--subtitle">Personal Project Card</p>
+              <hr className="author__project--line" />
+              <h2 className="author__project--title">
+                {projectName || 'Elegant Workspace'}
+              </h2>
+              <p className="author__project--slogan">
+                {projectSlogan || 'Diseños Exclusivos'}
+              </p>
+              <p className="author__project--description">
+                Product Description
+              </p>
+              <p className="author__project--desc">
+                {projectDesc ||
+                  'Lorem, ipsum dolor sit amet consectetur adipisicing elit.                Libero, delectus? Voluptates at hic aliquam porro ad suscipit'}
+              </p>
+              <section className="author__technologies">
+                <p className="author__technologies--text">
+                  {projectTechnologies || `React JS - MongoDB{' '}`}
+                </p>
+              </section>
             </section>
 
             <section className="author__info">
               <img className="author__info--image" src={user} alt="" />
-              <p className="author__info--job">Full Stack Developer</p>
-              <p className="author__info--name">Emmelie Björklund</p>
+              <p className="author__info--job">
+                {authorJob || 'Full Stack Developer'}
+              </p>
+              <p className="author__info--name">
+                {authorName || 'Emmelie Björklund'}
+              </p>
             </section>
           </section>
         </section>
@@ -83,7 +120,7 @@ function App() {
             <hr className="ask-info__line" />
           </section>
 
-          <fieldset className="project">
+          <fieldset className="project" onChange={dataProject}>
             <input
               className="project__input"
               type="text"
@@ -130,21 +167,21 @@ function App() {
             ></textarea>
           </fieldset>
 
-          {/* <section className="ask-info">
-            <p className="subtitle">Cuéntanos sobre la autora</p>
-            <hr className="line" />
+          <section className="ask-info">
+            <p className="ask-info__subtitle">Cuéntanos sobre la autora</p>
+            <hr className="ask-info__line" />
           </section>
 
-          <fieldset className="autor">
+          <fieldset className="autorForm" onChange={dataAuthor}>
             <input
-              className="input"
+              className="autorForm__input"
               type="text"
               placeholder="Nombre"
               name="autor"
               id="autor"
             />
             <input
-              className="input"
+              className="autorForm__input"
               type="text"
               placeholder="Trabajo"
               name="job"
@@ -153,13 +190,13 @@ function App() {
           </fieldset>
 
           <section className="buttons-img">
-            <button className="btn">Subir foto de proyecto</button>
-            <button className="btn">Subir foto de autora</button>
+            <button className="buttons-img__btn">Subir foto de proyecto</button>
+            <button className="buttons-img__btn">Subir foto de autora</button>
           </section>
           <section className="buttons-img">
-            <button className="btn-large" onClick="{handleClickCreateCard}"> }
-            <button className="btn-large">Crear Tarjeta</button>
-          </section> */}
+            {/* <button className="btn-large" onClick="{handleClickCreateCard}"> */}
+            <button className="buttons-img__btn-large">Crear Tarjeta</button>
+          </section>
 
           <section className="card">
             <span className=""> La tarjeta ha sido creada: </span>
