@@ -1,8 +1,13 @@
 import '../scss/layout/Form.scss';
 
-function Form() {
+function Form({ handleChange }) {
+
+  {/*hemos mandado por parámetro el nombre de las prop */ }
+
+
   return (
-    <section className="form">
+    <section className="form" onChange={handleChange}>
+
       <h2 className="form__title">Información</h2>
 
       <section className="ask-info">
