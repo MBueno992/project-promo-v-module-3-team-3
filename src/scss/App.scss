@@ -3,6 +3,10 @@
 
 .container {
   background-color: $color-dark;
-  padding: 20px;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    height: 100vh;
+  }
 }

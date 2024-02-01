@@ -9,7 +9,12 @@ function Header() {
           <i className="fa-solid fa-laptop-code"></i>
           <p className="text">Proyectos Molones</p>
         </div>
-        <a href="https://www.adalab.es/" className="header__nav--logo">
+        <a
+          href="https://www.adalab.es/"
+          className="header__nav--logo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src={logoAdalab} alt="adalab" />
         </a>
       </nav>
