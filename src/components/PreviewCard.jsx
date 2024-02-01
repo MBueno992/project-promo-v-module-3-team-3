@@ -23,7 +23,6 @@ function PreviewCard({ main }) {
           <p className="author__project--subtitle">Personal Project Card</p>
           <hr className="author__project--line" />
           <h2 className="author__project--title">
-            {' '}
             {name || 'Elegant Workspace'}
           </h2>
           <p className="author__project--slogan">
@@ -32,7 +31,7 @@ function PreviewCard({ main }) {
           <p className="author__project--description">Product Description</p>
           <p className="author__project--desc">
             {desc ||
-              'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero,  delectus Voluptates at hic aliquam porro ad suscipit'}
+              'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere recusandae, ipsum laboriosam optio aliquam ad, magnam, dolorum quisquam aliquid consectetur iste quidem doloremque quis eligendi sequi numquam! Vel, aliquam mollitia?'}
           </p>
           <section className="author__technologies">
             <p className="author__technologies--text">
