@@ -1,13 +1,19 @@
 import '../scss/layout/Form.scss';
 
 function Form({ handleChange }) {
-
-  {/*hemos mandado por parámetro el nombre de las prop */ }
-
+  const handleInput = (ev) => {
+    const object = {
+      key: ev.target.id,
+      value: ev.target.value,
+    };
+    handleChange(object);
+  };
+  {
+    /*hemos mandado por parámetro el nombre de las prop */
+  }
 
   return (
-    <section className="form" onChange={handleChange}>
-
+    <section className="form" onChange={handleInput}>
       <h2 className="form__title">Información</h2>
 
       <section className="ask-info">
@@ -22,6 +28,7 @@ function Form({ handleChange }) {
           placeholder="Nombre del proyecto"
           name="name"
           id="name"
+          required
         />
         <input
           className="project__input"
@@ -29,6 +36,7 @@ function Form({ handleChange }) {
           name="slogan"
           id="slogan"
           placeholder="Slogan"
+          required
         />
         <div className="demo">
           <input
@@ -37,6 +45,7 @@ function Form({ handleChange }) {
             name="repo"
             id="repo"
             placeholder="Repo"
+            required
           />
           <input
             className="project__input"
@@ -44,6 +53,7 @@ function Form({ handleChange }) {
             placeholder="Demo"
             name="demo"
             id="demo"
+            required
           />
         </div>
         <input
@@ -52,6 +62,7 @@ function Form({ handleChange }) {
           placeholder="Tecnologías"
           name="technologies"
           id="technologies"
+          required
         />
         <textarea
           className="project__textarea"
@@ -59,6 +70,7 @@ function Form({ handleChange }) {
           placeholder="Descripción"
           name="desc"
           id="desc"
+          required
         ></textarea>
       </fieldset>
 
@@ -74,6 +86,7 @@ function Form({ handleChange }) {
           placeholder="Nombre"
           name="autor"
           id="autor"
+          required
         />
         <input
           className="autorForm__input"
@@ -81,6 +94,7 @@ function Form({ handleChange }) {
           placeholder="Trabajo"
           name="job"
           id="job"
+          required
         />
       </fieldset>
 
