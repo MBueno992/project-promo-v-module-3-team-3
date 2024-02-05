@@ -1,13 +1,14 @@
 import '../scss/layout/Form.scss';
+import CreateCard from './CreateCard';
+import GetAvatar from './GetAvatar';
 
-function Form({ handleChange }) {
+function Form({ handleChange, validation }) {
   const handleInput = (ev) => {
-    const object = {
-      key: ev.target.id,
-      value: ev.target.value,
-    };
-    handleChange(object);
+    const inputId = ev.target.id;
+    const inputValue = ev.target.value;
+    handleChange(inputId, inputValue);
   };
+
   {
     /*hemos mandado por parámetro el nombre de las prop */
   }
@@ -99,20 +100,28 @@ function Form({ handleChange }) {
       </fieldset>
 
       <section className="buttons-img">
-        <button className="buttons-img__btn">Subir foto de proyecto</button>
-        <button className="buttons-img__btn">Subir foto de autora</button>
+        <GetAvatar
+          updateAvatar={handleChange}
+          text="Subir foto de proyecto"
+          id="image"
+        />
+        <GetAvatar
+          updateAvatar={handleChange}
+          text="Subir foto de autora"
+          id="photo"
+        />
       </section>
       <section className="buttons-img">
         {/* <button className="btn-large" onClick="{handleClickCreateCard}"> */}
-        <button className="buttons-img__btn-large">Crear Tarjeta</button>
+        <button className="buttons-img__btn-large" type="submit">
+          Crear Tarjeta
+        </button>
       </section>
 
-      <section className="card">
+      {/* <section className="card">
         <span className=""> La tarjeta ha sido creada: </span>
-        <a href="" className="" target="_blank" rel="noreferrer">
-          {' '}
-        </a>
-      </section>
+        <a href="" className="" target="_blank" rel="noreferrer"></a>
+      </section> */}
     </section>
   );
 }

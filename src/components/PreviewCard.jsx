@@ -2,7 +2,7 @@ import project from '../images/cover.jpeg';
 import user from '../images/user.svg';
 import '../scss/layout/PreviewCard.scss';
 
-function PreviewCard({ main }) {
+function PreviewCard({ data }) {
   const {
     name,
     slogan,
@@ -10,13 +10,15 @@ function PreviewCard({ main }) {
     repo,
     demo,
     desc,
-    authorName,
-    authorJob,
-  } = main;
+    autor,
+    job,
+    photo,
+    image,
+  } = data;
 
   return (
     <section className="preview">
-      <img className="imagePreview" src={project} alt="" />
+      <img className="imagePreview" src={image || project} alt={slogan || ''} />
 
       <section className="author">
         <section className="author__project">
@@ -50,13 +52,13 @@ function PreviewCard({ main }) {
         </section>
 
         <section className="author__info">
-          <img className="author__info--image" src={user} alt="" />
-          <p className="author__info--job">
-            {authorJob || 'Full Stack Developer'}
-          </p>
-          <p className="author__info--name">
-            {authorName || 'Emmelie Björklund'}
-          </p>
+          <img
+            className="author__info--image"
+            src={photo || user}
+            alt={autor || ''}
+          />
+          <p className="author__info--job">{job || 'Full Stack Developer'}</p>
+          <p className="author__info--name">{autor || 'Emmelie Björklund'}</p>
         </section>
       </section>
     </section>

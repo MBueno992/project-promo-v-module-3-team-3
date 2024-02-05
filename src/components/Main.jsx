@@ -1,11 +1,12 @@
 import PreviewCard from './PreviewCard';
 import Form from './Form';
 
-function Main({ main, handleChange }) {
+function Main({ data, handleChange, validation }) {
   return (
     <main className="main">
-      <PreviewCard main={main} />
-      <Form handleChange={handleChange} /> {/*enviamos nombre de la prop */}
+      <PreviewCard data={data} />
+      <Form handleChange={handleChange} validation={validation} />
+      {/*enviamos nombre de la prop */}
     </main>
   );
 }

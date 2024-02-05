@@ -6,57 +6,19 @@ import Main from './Main';
 import Footer from './Footer';
 
 function App() {
-  // const [projectName, setProjectName] = useState('');
-  // const [projectSlogan, setProjectSlogan] = useState('');
-  // const [projectTechnologies, setProjectTechnologies] = useState('');
-  // const [projectRepo, setProjectRepo] = useState('');
-  // const [projectDemo, setProjectDemo] = useState('');
-  // const [projectDesc, setProjectDesc] = useState('');
-  // const [authorName, setAuthorName] = useState('');
-  // const [authorJob, setAuthorJob] = useState('');
-  /*  const [authorPhoto, setAuthorPhoto] = useState(""); */
-  /*   const [image, setImage] = useState(""); */
   const [data, setData] = useState({});
+  const [validation, setValidation] = useState('');
 
-  const objectData = {
-    name: data.name,
-    slogan: data.slogan,
-    technologies: data.technologies,
-    repo: data.repo,
-    demo: data.demo,
-    desc: data.desc,
-    authorName: data.autor,
-    authorJob: data.job,
+  const dataForm = (key, value) => {
+    setData({ ...data, [key]: value });
   };
-  const dataForm = (event) => {
-    setData({ ...data, [event.key]: event.value });
-    // const inputId = event.target.id;
-    // const inputText = event.target.value;
 
-    // if (inputId === 'name') {
-    //   setData(inputText);
-    // } else if (inputId === 'slogan') {
-    //   setProjectSlogan(inputText);
-    // } else if (inputId === 'technologies') {
-    //   setProjectTechnologies(inputText);
-    // } else if (inputId === 'repo') {
-    //   setProjectRepo(inputText);
-    // } else if (inputId === 'demo') {
-    //   setProjectDemo(inputText);
-    // } else if (inputId === 'desc') {
-    //   setProjectDesc(inputText);
-    // }
-    // if (inputId === 'autor') {
-    //   setAuthorName(inputText);
-    // } else if (inputId === 'job') {
-    //   setAuthorJob(inputText);
-    // }
-  };
+  // const handleSubmit = () => {};
 
   return (
     <div className="container">
       <Header />
-      <Main main={objectData} handleChange={dataForm} />{' '}
+      <Main data={data} handleChange={dataForm} validation={validation} />
       {/*enviamos nombre de la función a través de prop */}
       <Footer />
     </div>
