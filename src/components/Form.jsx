@@ -2,7 +2,13 @@ import '../scss/layout/Form.scss';
 import CreateCard from './CreateCard';
 import GetAvatar from './GetAvatar';
 
-function Form({ handleChange, validation, handleCreateCard, urlCard }) {
+function Form({
+  handleChange,
+  validation,
+  handleCreateCard,
+  urlCard,
+  errorMsg,
+}) {
   const handleInput = (ev) => {
     const inputId = ev.target.id;
     const inputValue = ev.target.value;
@@ -14,7 +20,6 @@ function Form({ handleChange, validation, handleCreateCard, urlCard }) {
   }
 
   return (
-    
     <section className="form" onChange={handleInput}>
       <h2 className="form__title">Información</h2>
 
@@ -30,16 +35,16 @@ function Form({ handleChange, validation, handleCreateCard, urlCard }) {
           placeholder="Nombre del proyecto"
           name="name"
           id="name"
-          required
         />
+        <span className="autorForm__error">{errorMsg.name}</span>
         <input
           className="project__input"
           type="text"
           name="slogan"
           id="slogan"
           placeholder="Slogan"
-          required
-        />
+        />{' '}
+        <span className="autorForm__error">{errorMsg.slogan}</span>
         <div className="demo">
           <input
             className="project__input"
@@ -47,33 +52,33 @@ function Form({ handleChange, validation, handleCreateCard, urlCard }) {
             name="repo"
             id="repo"
             placeholder="Repo"
-            required
-          />
+          />{' '}
           <input
             className="project__input"
             type="text"
             placeholder="Demo"
             name="demo"
             id="demo"
-            required
-          />
+          />{' '}
         </div>
+        <span className="autorForm__error">{errorMsg.repo}</span>
+        <span className="autorForm__error">{errorMsg.demo}</span>
         <input
           className="project__input"
           type="text"
           placeholder="Tecnologías"
           name="technologies"
           id="technologies"
-          required
-        />
+        />{' '}
+        <span className="autorForm__error">{errorMsg.technologies}</span>
         <textarea
           className="project__textarea"
           type="text"
           placeholder="Descripción"
           name="desc"
           id="desc"
-          required
-        ></textarea>
+        ></textarea>{' '}
+        <span className="autorForm__error">{errorMsg.desc}</span>
       </fieldset>
 
       <section className="ask-info">
@@ -88,17 +93,18 @@ function Form({ handleChange, validation, handleCreateCard, urlCard }) {
           placeholder="Nombre"
           name="autor"
           id="autor"
-          required
-        />
+        />{' '}
+        <span className="autorForm__error">{errorMsg.autor}</span>
         <input
           className="autorForm__input"
           type="text"
           placeholder="Trabajo"
           name="job"
           id="job"
-          required
-        />
+        />{' '}
+        <span className="autorForm__error">{errorMsg.job}</span>
       </fieldset>
+      {/* <CreateCard urlCard={urlCard} validation={validation} /> */}
 
       <section className="buttons-img">
         <GetAvatar
@@ -111,15 +117,20 @@ function Form({ handleChange, validation, handleCreateCard, urlCard }) {
           text="Subir foto de autora"
           id="photo"
         />
+        <span className="autorForm__error">{errorMsg.image}</span>
+        <span className="autorForm__error">{errorMsg.photo}</span>
       </section>
       <section className="buttons-img">
-        {/* <button className="btn-large" onClick="{handleClickCreateCard}"> */}
-        <button className="buttons-img__btn-large" type="submit" onClick={handleCreateCard}>
+        <button
+          className="buttons-img__btn-large"
+          type="submit"
+          onClick={handleCreateCard}
+        >
           Crear Tarjeta
         </button>
       </section>
 
-      <CreateCard urlCard={urlCard} validation={validation}/>
+      <CreateCard urlCard={urlCard} validation={validation} />
     </section>
   );
 }

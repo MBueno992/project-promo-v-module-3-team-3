@@ -1,8 +1,10 @@
-function CreateCard({urlCard, validation}) {
+function CreateCard({ urlCard, validation }) {
   return (
     <section className="card">
-      <span className=""> {validation} </span>
-      <a href={urlCard} className="" target="_blank" rel="noreferrer"></a>
+      <span className=""> {validation || ''} </span>
+      <a href={urlCard} className="card__url" target="_blank" rel="noreferrer">
+        {urlCard}
+      </a>
     </section>
   );
 }

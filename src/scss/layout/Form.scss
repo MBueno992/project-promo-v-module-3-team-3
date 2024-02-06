@@ -120,10 +120,18 @@
       height: 41px;
     }
   }
+  &__error {
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    font-style: italic;
+  }
 }
 .buttons-img {
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
+
   gap: 6px;
   justify-content: center;
   &__div,
@@ -178,6 +186,23 @@
   }
 }
 
-/* .card {
-  display: none;
-} */
+.card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  gap: 5px;
+  color: white;
+  font-family: $font-family-montserrat;
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 20px;
+  @media (min-width: 768px) {
+    font-size: 2.4rem;
+  }
+  &__url {
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+  }
+}
