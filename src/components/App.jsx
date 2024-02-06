@@ -13,12 +13,35 @@ function App() {
     setData({ ...data, [key]: value });
   };
 
-  // const handleSubmit = () => {};
+  const [urlCard, setUrlCard] = useState("");
+
+ const handleCreateCard = () => {
+
+  if (data.name === "" && data.slogan === "" && data.repo === "" && data.demo === "" && data.technologies === "" && data.desc === "" && data.autor === "" && data.job === "" && data.image === "" && data.photo === "" ) {
+    setValidation("Revisa los campos")
+  } else {
+  
+    fetch('https://dev.adalab.es/api/projectCard', {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: { 'Content-type': 'application/json' },
+  })
+    .then((response) => response.json())
+    .then((result) => {
+      console.log(result);
+      setUrlCard(result);
+    })
+    .catch((error) => console.log(error));
+    setValidation("La tarjeta ha sido creada")
+}
+ }
+  
+
 
   return (
     <div className="container">
       <Header />
-      <Main data={data} handleChange={dataForm} validation={validation} />
+      <Main data={data} handleChange={dataForm} validation={validation} urlCard={urlCard} handleCreateCard={handleCreateCard}/>
       {/*enviamos nombre de la función a través de prop */}
       <Footer />
     </div>

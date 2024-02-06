@@ -2,7 +2,7 @@ import '../scss/layout/Form.scss';
 import CreateCard from './CreateCard';
 import GetAvatar from './GetAvatar';
 
-function Form({ handleChange, validation }) {
+function Form({ handleChange, validation, handleCreateCard, urlCard }) {
   const handleInput = (ev) => {
     const inputId = ev.target.id;
     const inputValue = ev.target.value;
@@ -14,6 +14,7 @@ function Form({ handleChange, validation }) {
   }
 
   return (
+    
     <section className="form" onChange={handleInput}>
       <h2 className="form__title">Información</h2>
 
@@ -113,15 +114,12 @@ function Form({ handleChange, validation }) {
       </section>
       <section className="buttons-img">
         {/* <button className="btn-large" onClick="{handleClickCreateCard}"> */}
-        <button className="buttons-img__btn-large" type="submit">
+        <button className="buttons-img__btn-large" type="submit" onClick={handleCreateCard}>
           Crear Tarjeta
         </button>
       </section>
 
-      {/* <section className="card">
-        <span className=""> La tarjeta ha sido creada: </span>
-        <a href="" className="" target="_blank" rel="noreferrer"></a>
-      </section> */}
+      <CreateCard urlCard={urlCard} validation={validation}/>
     </section>
   );
 }
