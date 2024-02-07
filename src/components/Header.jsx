@@ -1,5 +1,6 @@
 import logoAdalab from '../images/logo-adalab.png';
 import '../scss/layout/Header.scss';
+import Button from './Button';
 
 function Header() {
   return (
@@ -25,9 +26,9 @@ function Header() {
           Escaparate en línea para recoger ideas a través de la tecnología
         </h2>
         {/* <a className="header__title--new-btn" href=''>Nuevo proyecto</a> */}
-        <a className="header__title--see-btn" href="">
+        {/* <a className="header__title--see-btn" href="">
           Ver proyectos
-        </a>
+        </a> */}
       </div>
     </header>
   );

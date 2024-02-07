@@ -5,6 +5,8 @@ import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
 import local from '../services/localStorage';
+import Landing from './Landing';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   //Aquí estoy diciendo que me rellene el data con lo que hay en el localStorage y si no hay nada, que me devuelva el valor por defecto que son ''.
@@ -90,15 +92,31 @@ function App() {
   return (
     <div className="container">
       <Header />
+      <Routes>
+        <Route path="/" element={<Landing data={data} />} />
+        <Route
+          path="/newProject"
+          element={
+            <Main
+              data={data}
+              handleChange={dataForm}
+              validation={validation}
+              urlCard={urlCard}
+              handleCreateCard={handleSubmit}
+              errorMsg={errorMsg}
+            />
+          }
+        />
 
-      <Main
-        data={data}
-        handleChange={dataForm}
-        validation={validation}
-        urlCard={urlCard}
-        handleCreateCard={handleSubmit}
-        errorMsg={errorMsg}
-      />
+        {/* // <Main
+      //   data={data}
+      //   handleChange={dataForm}
+      //   validation={validation}
+      //   urlCard={urlCard}
+      //   handleCreateCard={handleSubmit}
+      //   errorMsg={errorMsg}
+      // /> */}
+      </Routes>
       {/*enviamos nombre de la función a través de prop */}
       <Footer />
     </div>

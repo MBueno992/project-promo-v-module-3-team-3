@@ -125,7 +125,6 @@ function Form({
           text="Subir foto de autora"
           id="image"
         />
-
         <span className="autorForm__error">{errorMsg.image}</span>
         <span className="autorForm__error">{errorMsg.photo}</span>
       </section>
