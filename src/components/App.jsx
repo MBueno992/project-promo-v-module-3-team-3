@@ -67,6 +67,7 @@ function App() {
       handleCreateCard();
     } else {
       setValidation('Ha habido algún error, revisa el formulario');
+      setUrlCard('');
     }
   };
 

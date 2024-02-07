@@ -110,13 +110,14 @@ function Form({
         <GetAvatar
           updateAvatar={handleChange}
           text="Subir foto de proyecto"
-          id="image"
+          id="photo"
         />
         <GetAvatar
           updateAvatar={handleChange}
           text="Subir foto de autora"
-          id="photo"
+          id="image"
         />
+
         <span className="autorForm__error">{errorMsg.image}</span>
         <span className="autorForm__error">{errorMsg.photo}</span>
       </section>
