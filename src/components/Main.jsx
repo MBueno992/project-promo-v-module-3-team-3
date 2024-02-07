@@ -18,6 +18,7 @@ function Main({
         urlCard={urlCard}
         handleCreateCard={handleCreateCard}
         errorMsg={errorMsg}
+        data={data}
       />
       {/*enviamos nombre de la prop */}
     </main>

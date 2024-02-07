@@ -7,7 +7,8 @@ import Footer from './Footer';
 import local from '../services/localStorage';
 
 function App() {
-  const [data, setData] = useState({});
+  //Aquí estoy diciendo que me rellene el data con lo que hay en el localStorage y si no hay nada, que me devuelva el valor por defecto que son ''.
+  const [data, setData] = useState(local.get('dataProject', ''));
   const [validation, setValidation] = useState('');
   const [urlCard, setUrlCard] = useState('');
   const [errorMsg, setErrorMsg] = useState({});
@@ -18,7 +19,7 @@ function App() {
 
   useEffect(() => {
     local.set('dataProject', data);
-  });
+  }, [data]);
 
   //Esta función es la que valida cada input y guarda en un objeto el mensaje de error según la propiedad del input.
   const validateForm = () => {
@@ -89,6 +90,7 @@ function App() {
   return (
     <div className="container">
       <Header />
+
       <Main
         data={data}
         handleChange={dataForm}

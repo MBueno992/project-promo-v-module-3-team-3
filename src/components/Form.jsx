@@ -8,6 +8,7 @@ function Form({
   handleCreateCard,
   urlCard,
   errorMsg,
+  data,
 }) {
   const handleInput = (ev) => {
     const inputId = ev.target.id;
@@ -35,15 +36,16 @@ function Form({
           placeholder="Nombre del proyecto"
           name="name"
           id="name"
+          defaultValue={data.name}
         />
-        <span className="autorForm__error">{errorMsg.name}</span>
         <input
           className="project__input"
           type="text"
           name="slogan"
           id="slogan"
           placeholder="Slogan"
-        />{' '}
+          defaultValue={data.slogan}
+        />
         <span className="autorForm__error">{errorMsg.slogan}</span>
         <div className="demo">
           <input
@@ -52,14 +54,16 @@ function Form({
             name="repo"
             id="repo"
             placeholder="Repo"
-          />{' '}
+            defaultValue={data.repo}
+          />
           <input
             className="project__input"
             type="text"
             placeholder="Demo"
             name="demo"
             id="demo"
-          />{' '}
+            defaultValue={data.demo}
+          />
         </div>
         <span className="autorForm__error">{errorMsg.repo}</span>
         <span className="autorForm__error">{errorMsg.demo}</span>
@@ -69,6 +73,7 @@ function Form({
           placeholder="Tecnologías"
           name="technologies"
           id="technologies"
+          defaultValue={data.technologies}
         />{' '}
         <span className="autorForm__error">{errorMsg.technologies}</span>
         <textarea
@@ -77,6 +82,7 @@ function Form({
           placeholder="Descripción"
           name="desc"
           id="desc"
+          defaultValue={data.desc}
         ></textarea>{' '}
         <span className="autorForm__error">{errorMsg.desc}</span>
       </fieldset>
@@ -93,7 +99,8 @@ function Form({
           placeholder="Nombre"
           name="autor"
           id="autor"
-        />{' '}
+          defaultValue={data.autor}
+        />
         <span className="autorForm__error">{errorMsg.autor}</span>
         <input
           className="autorForm__input"
@@ -101,6 +108,7 @@ function Form({
           placeholder="Trabajo"
           name="job"
           id="job"
+          defaultValue={data.job}
         />{' '}
         <span className="autorForm__error">{errorMsg.job}</span>
       </fieldset>
