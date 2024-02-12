@@ -10,6 +10,7 @@ function Main({
   urlCard,
   handleCreateCard,
   errorMsg,
+  handleReset,
 }) {
   return (
     <main className="mainBtn">
@@ -23,6 +24,7 @@ function Main({
           handleCreateCard={handleCreateCard}
           errorMsg={errorMsg}
           data={data}
+          handleReset={handleReset}
         />
       </div>
       {/*enviamos nombre de la prop */}

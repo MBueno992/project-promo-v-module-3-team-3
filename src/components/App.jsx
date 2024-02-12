@@ -10,7 +10,18 @@ import { Route, Routes } from 'react-router-dom';
 
 function App() {
   //Aquí estoy diciendo que me rellene el data con lo que hay en el localStorage y si no hay nada, que me devuelva el valor por defecto que son ''.
-  const [data, setData] = useState(local.get('dataProject', ''));
+  const [data, setData] = useState(
+    local.get('dataProject', {
+      name: '',
+      slogan: '',
+      repo: '',
+      demo: '',
+      technologies: '',
+      desc: '',
+      autor: '',
+      job: '',
+    })
+  );
   const [validation, setValidation] = useState('');
   const [urlCard, setUrlCard] = useState('');
   const [errorMsg, setErrorMsg] = useState({});
@@ -34,9 +45,13 @@ function App() {
     }
     if (!data.repo) {
       errors.repo = 'La URL del repositorio es obligatoria';
+    } else if (!/^https?:\/\/\S+$/.test(data.repo)) {
+      errors.repo = 'La URL del repositorio no es válida';
     }
     if (!data.demo) {
       errors.demo = 'La URL de la demo es obligatoria';
+    } else if (!/^https?:\/\/\S+$/.test(data.demo)) {
+      errors.repo = 'La URL de al demo no es válida';
     }
     if (!data.technologies) {
       errors.technologies = 'Las tecnologias utilizadas son obligatorias';
@@ -74,6 +89,19 @@ function App() {
     }
   };
 
+  const handleReset = () => {
+    setData({
+      name: '',
+      slogan: '',
+      repo: '',
+      demo: '',
+      technologies: '',
+      desc: '',
+      autor: '',
+      job: '',
+    });
+  };
+
   //Esta función solo se ejecuta cuando todos los campos están completos, es la que genera el enlace y nos pone el mensaje de tarjeta creada
   const handleCreateCard = () => {
     fetch('https://dev.adalab.es/api/projectCard', {
@@ -104,18 +132,10 @@ function App() {
               urlCard={urlCard}
               handleCreateCard={handleSubmit}
               errorMsg={errorMsg}
+              handleReset={handleReset}
             />
           }
         />
-
-        {/* // <Main
-      //   data={data}
-      //   handleChange={dataForm}
-      //   validation={validation}
-      //   urlCard={urlCard}
-      //   handleCreateCard={handleSubmit}
-      //   errorMsg={errorMsg}
-      // /> */}
       </Routes>
       {/*enviamos nombre de la función a través de prop */}
       <Footer />

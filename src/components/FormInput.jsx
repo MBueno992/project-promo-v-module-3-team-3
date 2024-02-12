@@ -1,20 +1,14 @@
-function FormInput({ type, placeholder, name, id, errorMsg }) {
-  const msg = errorMsg.map((text, i) => {
-    <span className="autorForm__error" key={i}>
-      {text.name}
-    </span>;
-  });
-
+function FormInput({ placeholder, name, id, data }) {
   return (
     <>
       <input
         className="project__input"
-        type={type}
+        type="text"
         placeholder={placeholder}
         name={name}
         id={id}
+        value={data}
       />
-      {msg}
     </>
   );
 }

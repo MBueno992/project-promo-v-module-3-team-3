@@ -1,5 +1,6 @@
 import '../scss/layout/Form.scss';
 import CreateCard from './CreateCard';
+import FormInput from './FormInput';
 import GetAvatar from './GetAvatar';
 
 function Form({
@@ -9,6 +10,7 @@ function Form({
   urlCard,
   errorMsg,
   data,
+  handleReset,
 }) {
   const handleInput = (ev) => {
     const inputId = ev.target.id;
@@ -30,51 +32,43 @@ function Form({
       </section>
 
       <fieldset className="project">
-        <input
-          className="project__input"
-          type="text"
+        <FormInput
           placeholder="Nombre del proyecto"
           name="name"
           id="name"
-          defaultValue={data.name}
+          data={data.name}
+          handleChange={handleChange}
         />
-        <input
-          className="project__input"
-          type="text"
+        <span className="autorForm__error">{errorMsg.name}</span>
+        <FormInput
+          placeholder="Slogan"
           name="slogan"
           id="slogan"
-          placeholder="Slogan"
-          defaultValue={data.slogan}
+          data={data.slogan}
         />
         <span className="autorForm__error">{errorMsg.slogan}</span>
         <div className="demo">
-          <input
-            className="project__input"
-            type="text"
+          <FormInput
+            placeholder="Repo"
             name="repo"
             id="repo"
-            placeholder="Repo"
-            defaultValue={data.repo}
+            data={data.repo}
           />
-          <input
-            className="project__input"
-            type="text"
+          <FormInput
             placeholder="Demo"
             name="demo"
             id="demo"
-            defaultValue={data.demo}
+            data={data.demo}
           />
         </div>
         <span className="autorForm__error">{errorMsg.repo}</span>
         <span className="autorForm__error">{errorMsg.demo}</span>
-        <input
-          className="project__input"
-          type="text"
+        <FormInput
           placeholder="Tecnologías"
           name="technologies"
           id="technologies"
-          defaultValue={data.technologies}
-        />{' '}
+          data={data.technologies}
+        />
         <span className="autorForm__error">{errorMsg.technologies}</span>
         <textarea
           className="project__textarea"
@@ -82,8 +76,8 @@ function Form({
           placeholder="Descripción"
           name="desc"
           id="desc"
-          defaultValue={data.desc}
-        ></textarea>{' '}
+          data={data.desc}
+        ></textarea>
         <span className="autorForm__error">{errorMsg.desc}</span>
       </fieldset>
 
@@ -93,40 +87,33 @@ function Form({
       </section>
 
       <fieldset className="autorForm">
-        <input
-          className="autorForm__input"
-          type="text"
+        <FormInput
           placeholder="Nombre"
           name="autor"
           id="autor"
-          defaultValue={data.autor}
+          data={data.autor}
         />
         <span className="autorForm__error">{errorMsg.autor}</span>
-        <input
-          className="autorForm__input"
-          type="text"
-          placeholder="Trabajo"
-          name="job"
-          id="job"
-          defaultValue={data.job}
-        />{' '}
+        <FormInput placeholder="Trabajo" name="job" id="job" data={data.job} />
         <span className="autorForm__error">{errorMsg.job}</span>
       </fieldset>
-      {/* <CreateCard urlCard={urlCard} validation={validation} /> */}
-
       <section className="buttons-img">
-        <GetAvatar
-          updateAvatar={handleChange}
-          text="Subir foto de proyecto"
-          id="photo"
-        />
-        <GetAvatar
-          updateAvatar={handleChange}
-          text="Subir foto de autora"
-          id="image"
-        />
-        <span className="autorForm__error">{errorMsg.image}</span>
-        <span className="autorForm__error">{errorMsg.photo}</span>
+        <div className="buttons-img__btn">
+          <GetAvatar
+            updateAvatar={handleChange}
+            text="Subir foto de proyecto"
+            id="photo"
+          />
+          <GetAvatar
+            updateAvatar={handleChange}
+            text="Subir foto de autora"
+            id="image"
+          />
+        </div>
+        <div className="buttons-img__errorMsg">
+          <span className="autorForm__error">{errorMsg.image}</span>
+          <span className="autorForm__error">{errorMsg.photo}</span>
+        </div>
       </section>
       <section className="buttons-img">
         <button
@@ -135,6 +122,9 @@ function Form({
           onClick={handleCreateCard}
         >
           Crear Tarjeta
+        </button>
+        <button className="buttons-img__btn-reset" onClick={handleReset}>
+          Reset
         </button>
       </section>
 

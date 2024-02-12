@@ -70,7 +70,7 @@
     font-size: 1rem;
     &::placeholder {
       font-family: $font-family-montserrat;
-      color: $color-white;
+      color: rgba(white, 0.4);
     }
     @media (min-width: 768px) {
       font-size: 1.4rem;
@@ -113,7 +113,7 @@
     font-size: 1rem;
     &::placeholder {
       font-family: $font-family-montserrat;
-      color: $color-white;
+      color: rgba(white, 0.4);
     }
     @media (min-width: 768px) {
       font-size: 1.4rem;
@@ -121,7 +121,7 @@
     }
   }
   &__error {
-    color: white;
+    color: rgb(255, 217, 0);
     text-align: center;
     font-size: 1rem;
     font-style: italic;
@@ -130,12 +130,23 @@
 .buttons-img {
   text-align: center;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
+  align-items: center;
 
-  gap: 6px;
-  justify-content: center;
+  &__btn {
+    gap: 12px;
+    display: flex;
+    flex-direction: row;
+  }
+  &__errorMsg {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
   &__div,
-  &__btn-large {
+  &__btn-large,
+  &__btn-reset {
     background: linear-gradient(
       90deg,
       $color-dark-lilac -1.57%,
@@ -155,9 +166,9 @@
     font-size: 1rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     @media (min-width: 768px) {
       font-size: 1.2rem;
-
       height: 41px;
       padding: 0 0;
     }
@@ -169,6 +180,7 @@
       font-family: $font-family-montserrat;
       font-weight: bold;
       font-size: 1rem;
+      cursor: pointer;
       @media (min-width: 768px) {
         font-size: 1.2rem;
       }
@@ -176,12 +188,22 @@
   }
   &__btn-large {
     border: solid 2px $color-white;
-    margin-bottom: 56px;
     margin-top: 18px;
     padding: 0 30px;
+    cursor: pointer;
     @media (min-width: 768px) {
-      width: 190px;
+      width: 172px;
       font-size: 1.6rem;
+    }
+  }
+  &__btn-reset {
+    margin-top: 20px;
+    cursor: pointer;
+    height: 30px;
+    width: 70px;
+    @media (min-width: 768px) {
+      height: 40px;
+      width: 120px;
     }
   }
 }
